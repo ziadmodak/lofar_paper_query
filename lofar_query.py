@@ -9,6 +9,7 @@ data = pd.read_csv('paper_data.csv')
 
 dois = [j for j in data['DOI']]
 
+ads.config.token = 'your_token_here'
 ads_data = [list(ads.SearchQuery(doi=j, fl=['title', 'pubdate', 'identifier']))[0] for j in dois]
 
 unpacked_data = []
