@@ -52,4 +52,4 @@ for i in tqdm(range(len(arxiv_papers))):
 
 codes = np.array(codes)
 df = pd.DataFrame(codes)
-df.to_csv('ouput_codes.csv', encoding='utf-8', index=False)
+df.to_csv('output_codes.csv', encoding='utf-8', index=False)
