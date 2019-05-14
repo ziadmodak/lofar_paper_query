@@ -45,7 +45,7 @@ codes = []
 for i in tqdm(range(len(arxiv_papers))):
     arxiv.download(arxiv_papers[i], slugify=temp_file)
     # paper = list(ads.SearchQuery(title=i.title))[0] 
-    hits = os.popen('pdfgrep -o "LT[0-9].{0,5}|LC[0-9].{0,5}|L[0-9][0-9][0-9][0-9][0-9]{0,2}|DDT[0-9]{0,5}" temp.pdf').read()
+    hits = os.popen('pdfgrep -o "LT[0-9].{0,5}|LC[0-9].{0,5}|L[0-9][0-9][0-9][0-9][0-9].{0,2}|DDT[0-9].{0,5}" temp.pdf').read()
     codes.append(np.array([paper_titles[i],paper_pubdates[i],hits.splitlines()]))
     os.system('rm temp.pdf')
 
