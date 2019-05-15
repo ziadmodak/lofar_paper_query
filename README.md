@@ -1,4 +1,4 @@
-# lofar_paper_query
+# lofar-paper-query
 Python script to search for LOFAR projects used in a scientific paper.
 
 Requires `arxiv`. `ads` and `tqdm`. These packages can be installed by this command:
