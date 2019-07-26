@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
-"""Author: M.Iacobelli iacobelli@astron.nl"""
+"""Author: M.Iacobelli iacobelli@astron.nl
+   ZM: Minor changes to make the plots easier to read
+"""
 
 import fnmatch, numpy as np, os, re, sys ; import matplotlib.pyplot as plt ; import scipy.stats as stats
 
@@ -198,11 +200,7 @@ if __name__ == '__main__':
 	# plot values
 	sn_plots(obj_name, Stat_mode, Stat_name, CSstat_ID, RSstat_ID, INTstat_ID, CS_sn, RS_sn, INT_sn, SASid, SAVEfig)
 	# remove auxiliary files and folders
-#	os.system('rm -f L*_summaryCS.log')
 	os.system('rm -f L*_summaryCS.tar')
-#	os.system('rm -f combined*.png')
-#	os.system('rm -f *status*.png')
-#	os.system('rm -f *.pdf')
 	os.system('rm -rf stokes') 
 	os.system('rm -f L*.parset')
 	os.system('rm -f beam_process_node.txt')
